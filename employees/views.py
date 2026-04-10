@@ -15,5 +15,5 @@ class EmployeeListView(ListView):
 class EmployeeCreateView(CreateView):
     model = Employee
     form_class = EmployeeForm
-    template_name = 'employess/add-employee.html'
+    template_name = 'employees/add_employee.html'
     success_url = 'employees:list'
