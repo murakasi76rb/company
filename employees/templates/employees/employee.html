@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}List employee{% endblock title %}
+{% block contents %}
+{% if employees_list %}
+{% for employee in employees_list %}
+<p>{{ employee.name}}</p>
+{% endfor %}
+{% else %}
+<p>.List Empty</p>
+{% endif %}
+{% endblock contents %}
