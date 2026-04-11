@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}List employee{% endblock title %}
+{% block content %}
+{% if employee %}
+{% for empl in employee %}
+<a  href='{% url "employees:detail" empl.pk%}'>{{ empl.name}}</a>
+{% endfor %}
+{% else %}
+<p>.List Empty</p>
+{% endif %}
+<p>
+<a href="{% url 'employees:create' %}">Create new employee</a>
+</p>
+{% endblock content %}
