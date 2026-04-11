@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}About {{ object.name }}{% endblock title %}
+{% block content %}
+<h3>
+    {{ employee.name}}
+</h3>
+<p>
+    {{ employee.email }}
+</p>
+<a href='{% url "employees:list" %}'> Got to all employees</a>
+{% endblock content %}
