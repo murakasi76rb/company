@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Create Employee{% endblock title %}
-{% block contents %}
+{% block content %}
 <form method='post'>
 {% csrf_token %}
-{{ form.as_p }}
+{{ form.non_field_errors}}
+<div>
+{{ form.name.label }}
+{{ form.name}}
+{{ form.name.errors }}
+</div>
+<div>
+{{form.email.label }}
+{{ form.email }}
+{{ form.email.errors }}
+</div>
 <input type='submit' value='Create'>
 </form>
-{% endblock contents %}
+<p>
+    <a href="{% url 'employees:list' %}">Go to list employees</a>
+</p>
+{% endblock content %}
