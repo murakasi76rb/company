@@ -14,3 +14,6 @@ class EmployeeForm(forms.ModelForm):
         if domain in BLOCKED_DOMEN:
             raise forms.ValidationError("This domen email blocked")
         return email
+
+
+EmployeeFormSet = forms.modelformset_factory(Employee, fields=("name", "email"), extra=3)
