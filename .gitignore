@@ -13,6 +13,7 @@ venv/
 
 # DB (для навчання можна ігнорити)
 db.sqlite3
+*.json
 
 # Logs
 *.log
